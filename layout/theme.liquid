@@ -25,17 +25,17 @@
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
 
-    <style>
-      body {
-        background-color: red !important;
-      }
-    </style>
-
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
     {% endif %}
 
     {{ content_for_header }}
+
+    <style>
+      body {
+        background-color: red !important;
+      }
+    </style>
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
