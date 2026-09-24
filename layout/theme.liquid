@@ -25,7 +25,11 @@
     {%- render 'theme-styles-variables' -%}
     {%- render 'color-palette' -%}
 
-    {{ 'barcelona-styles.css' | asset_url | link_tag }}
+    <style>
+      body {
+        background-color: red !important;
+      }
+    </style>
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
